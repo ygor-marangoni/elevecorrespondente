@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="68" viewBox="0 0 1920 68" fill="none">
+  <defs>
+    <filter id="ticker-noise" x="0" y="0" width="1920" height="68" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="2 2" stitchTiles="stitch" numOctaves="3" seed="2680" result="noise"/>
+      <feColorMatrix in="noise" type="luminanceToAlpha" result="alphaNoise"/>
+      <feComponentTransfer in="alphaNoise" result="subtleNoise">
+        <feFuncA type="table" tableValues="0 0.34"/>
+      </feComponentTransfer>
+      <feFlood flood-color="#1f1f1f" result="noiseColor"/>
+      <feComposite in="noiseColor" in2="subtleNoise" operator="in"/>
+    </filter>
+  </defs>
+  <rect width="1920" height="68" fill="#1f1f1f" opacity="0.42" filter="url(#ticker-noise)"/>
+</svg>
