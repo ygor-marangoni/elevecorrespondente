@@ -930,3 +930,4 @@ html { scroll-padding-top:100px; }
 @media(max-width:760px) { .site-header .brand-logo-text,.site-header.is-fixed .brand-logo-text { width:clamp(88px,21vw,108px); } }
 @media(max-width:380px) { .site-header .brand-logo-text,.site-header.is-fixed .brand-logo-text { width:76px; }.closing-contact-details dd { font-size:14px; } }
 @media(max-width:760px) { .eyebrow.section-badge>span,.art-pill>span { position:relative; top:1px; } }
+@media(max-width:760px) { .hero-copy>.eyebrow.section-badge>img { padding:6px; } }
