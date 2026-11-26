@@ -7,12 +7,14 @@
   const finished = new WeakSet();
   const running = new Map();
   let mobile = window.innerWidth <= 760;
+  // Use the full viewport so the footer can reveal at the end of the page,
+  // and tall sections do not need an unreachable percentage to be visible.
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!eligible(entry.target)) return;
-      if (entry.isIntersecting && entry.intersectionRatio >= .15) reveal(entry.target);
+      if (entry.isIntersecting) reveal(entry.target);
     });
-  }, { threshold: [0, .15, .3], rootMargin: '0px 0px -16% 0px' });
+  }, { threshold: 0, rootMargin: '0px' });
 
   function eligible(target) {
     const scope = target.dataset.revealScope;
