@@ -4,16 +4,14 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<!-- Demo: remove noindex when this becomes the official, approved website. -->
-<meta content="noindex,follow" name="robots"/>
 <meta content="#30251f" name="theme-color"/>
 <meta content="Financiamento imobiliário CAIXA em Franca, SP. A Eleve orienta você sobre crédito, documentos e acompanha cada etapa da conquista do seu imóvel." name="description"/>
-<title>Eleve | Financiamento imobiliário CAIXA em Franca</title>
+<title>Correspondente CAIXA em Franca | Eleve Soluções em Crédito</title>
 <link rel="canonical" href="https://elevecorrespondente.vercel.app/"/>
 <meta property="og:locale" content="pt_BR"/>
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="Eleve Soluções em Crédito"/>
-<meta property="og:title" content="Eleve | Financiamento imobiliário CAIXA em Franca"/>
+<meta property="og:title" content="Correspondente CAIXA em Franca | Eleve Soluções em Crédito"/>
 <meta property="og:description" content="Orientação e acompanhamento para financiar seu imóvel com crédito CAIXA em Franca, SP."/>
 <meta property="og:url" content="https://elevecorrespondente.vercel.app/"/>
 <meta property="og:image" content="https://elevecorrespondente.vercel.app/images/eleve-hero-editorial.webp"/>
@@ -21,7 +19,7 @@
 <meta property="og:image:height" content="1024"/>
 <meta property="og:image:alt" content="Cena ilustrativa de conquista de um novo lar"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Eleve | Financiamento imobiliário CAIXA em Franca"/>
+<meta name="twitter:title" content="Correspondente CAIXA em Franca | Eleve Soluções em Crédito"/>
 <meta name="twitter:description" content="Orientação e acompanhamento para financiar seu imóvel com crédito CAIXA em Franca, SP."/>
 <meta name="twitter:image" content="https://elevecorrespondente.vercel.app/images/eleve-hero-editorial.webp"/>
 <link href="images/eleve-favicon.svg" rel="icon" type="image/svg+xml"/>
@@ -31,18 +29,37 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FinancialService",
-  "name": "Eleve Soluções em Crédito",
-  "description": "Correspondente exclusivo CAIXA em Franca, com orientação e acompanhamento em crédito imobiliário.",
-  "telephone": "+55-16-99367-4960",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Avenida Santos Dumont, 586, Vila Santos Dumont",
-    "addressLocality": "Franca",
-    "addressRegion": "SP",
-    "addressCountry": "BR"
-  },
-  "sameAs": ["https://www.instagram.com/elevecorrespondente/"]
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://elevecorrespondente.vercel.app/#website",
+      "url": "https://elevecorrespondente.vercel.app/",
+      "name": "Eleve Soluções em Crédito",
+      "alternateName": "Eleve",
+      "inLanguage": "pt-BR"
+    },
+    {
+      "@type": "FinancialService",
+      "@id": "https://elevecorrespondente.vercel.app/#empresa",
+      "name": "Eleve Soluções em Crédito",
+      "url": "https://elevecorrespondente.vercel.app/",
+      "description": "Correspondente exclusivo CAIXA em Franca, com orientação e acompanhamento em crédito imobiliário.",
+      "telephone": "+55-16-99367-4960",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Avenida Santos Dumont, 586, Vila Santos Dumont",
+        "addressLocality": "Franca",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Franca"
+      },
+      "sameAs": ["https://www.instagram.com/elevecorrespondente/"],
+      "mainEntityOfPage": "https://elevecorrespondente.vercel.app/"
+    }
+  ]
 }
 </script>
 <script defer="" src="js/site-eleve.js"></script>
