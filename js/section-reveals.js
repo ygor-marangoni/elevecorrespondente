@@ -33,8 +33,9 @@
       { opacity: 1, offset: 1 }
     ], { duration, delay, fill: 'backwards', easing: 'linear' });
     const animations = [fade];
+    const riseDistance = typeof rise === 'number' ? rise : mobile ? 18 : 24;
     if (rise) animations.push(target.animate([
-      { transform: `translateY(${mobile ? 18 : 24}px)` }, { transform: 'translateY(0)' }
+      { transform: `translateY(${riseDistance}px)` }, { transform: 'translateY(0)' }
     ], { duration: duration + 100, delay, fill: 'backwards', easing: 'cubic-bezier(0.23,1,0.32,1)' }));
     running.set(target, animations);
     let remaining = animations.length;
@@ -69,12 +70,14 @@
     });
   }
   // First-view typography enters as three overlapping beats, with no loading screen.
-  const heroTiming = { badge: [650, 0], message: [900, 70], action: [760, 180], signature: [850, 240] };
+  const heroTiming = { brand: [420, 0], badge: [650, 45], message: [900, 90], action: [760, 160], signature: [850, 220] };
   heroes.forEach(target => {
     finished.add(target);
     if (reduce.matches || typeof target.animate !== 'function' || target.getBoundingClientRect().bottom <= 0) return;
     const [duration, delay] = heroTiming[target.dataset.heroReveal];
-    play(target, duration, delay, target.dataset.heroReveal !== 'signature');
+    const type = target.dataset.heroReveal;
+    const rise = type === 'brand' ? 8 : type === 'badge' || type === 'signature' ? false : true;
+    play(target, duration, delay, rise);
   });
   document.addEventListener('focusin', event => {
     const target = event.target.closest('[data-reveal],[data-hero-reveal]');
