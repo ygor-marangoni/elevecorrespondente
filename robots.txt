@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /referencia-original/
+Disallow: /Site%20Inter/
+
+Sitemap: https://elevecorrespondente.vercel.app/sitemap.xml
